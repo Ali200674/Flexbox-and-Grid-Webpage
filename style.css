@@ -1,12 +1,13 @@
 body{
     display: grid;
-    grid-template-rows: 1fr 2fr 2fr 1fr;
     grid-template-areas: 
     "header header header"
     "main main main"
     "article article article"
     "footer footer footer"
     ;
+    margin: 20px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 
@@ -15,10 +16,7 @@ header{
     display: flex;
     grid-area: header;
     justify-content: space-between;
-    align-content: baseline;
     align-items: center;
-    margin: 20px;
-    background-color: blue;
     border-radius: 5px;
 }
 header p{
@@ -29,18 +27,12 @@ header p{
 header ul{
     list-style-type: none;
     display: flex;
+    margin-right: 20px;
     
 }
 header li{
-    margin: 20px;
+    margin-left: 40px;
 }
-
-
-
-
-
-
-
 
 
 
@@ -50,6 +42,7 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: start;
+    margin-bottom: 50px;
 }
 main h1{
     font-size: 40px;
@@ -62,18 +55,50 @@ main p{
 }
 
 
+
+
 img {
-    width: 400px;
+    width: 200px;
     height: auto;
 }
-
-
-
 article{
     display: flex;
     grid-area: article;
-    flex-direction: column;
+    justify-content: space-between;
 }
+
+article .cards{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
 footer{
+    margin-top: 100px;
+    display: flex;
     grid-area: footer;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+}
+.footer-p {
+    display: flex;
+}
+footer p {
+        margin: 0 20px;
+}
+footer h2{
+    margin-left: 20px;
+}
+.footer-images{
+     margin-right: 20px;
+}
+.footer{
+    width: 40px;
+    height: auto;
+    margin-left: 20px;
 }
